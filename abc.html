@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+body{
+  background-color:grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav{
+  width: 100%;
+  background-color: aqua;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.nav ul{
+  list-style: none;
+display: flex;
+
+}
+
+.nav ul li {
+  background-color: aquamarine;
+  padding: 4px 12px;
+  margin: 0px 20px;
+}
+.logo{
+  padding:0 20px
+}
+.menu{
+  background-color: aqua;
+  display: none;
+}
+@media all and (min-width:320px) and (max-width:480px) {
+  body{
+    background-color: red;
+  }
+  .menu{
+  background-color: rgb(58, 53, 53);
+  display: flex;
+}
+  .menu2{
+  background-color: rgb(29, 68, 153);
+  display: flex;
+}
+.logo{
+  padding:0 10px
+}
+.nav ul{
+display: none;
+
+}
+
+.nav2 ul{
+display: flex;
+width: 100%;
+position: absolute;
+top: 60px;
+
+flex-direction: column;
+}
+}
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="logo">
+      <h4>Brand Name</h4>
+    </div>
+    <ul >
+      <li>HOME</li>
+      <li>ABOUT</li>
+      <li>SERVICE</li>
+      <li>CONTACT</li>
+      <li>COMMENT</li>
+      <li>POST</li>
+    </ul>
+    <div  onclick="menu()" class="menu">
+      menu
+    </div>
+
+  </nav>
+  
+  <script>
+    function menu(){
+var ab=document.getElementsByClassName('menu');
+ab[0].classList.toggle('menu2');
+var bc=document.getElementsByClassName('nav');
+bc[0].classList.toggle('nav2');
+}
+    </script>
+
+</body>
+</html>
